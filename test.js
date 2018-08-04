@@ -11,6 +11,6 @@ client.getBlockchainInfo(function(err, info) {
     return console.error(err);
   }
 
-  console.log('Info: ' + info);
+  console.log('Info: ' + JSON.stringify(info));
 });
 
