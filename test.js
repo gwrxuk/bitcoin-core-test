@@ -14,3 +14,22 @@ client.getBlockchainInfo(function(err, info) {
   console.log('Info: ' + JSON.stringify(info));
 });
 
+
+
+client.getDifficulty(function(err, difficulty) {
+  if (err) {
+    return console.error(err);
+  }
+
+  console.log('Difficulty: ' + difficulty);
+});
+
+
+
+client.getnewaddress(function(err, address) {
+  if (err) {
+    return console.error(err);
+  }
+
+  console.log('address ' + address);
+});
