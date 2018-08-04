@@ -26,7 +26,7 @@ client.getDifficulty(function(err, difficulty) {
 
 
 
-client.getNewaddress(function(err, address) {
+client.getNewAddress(function(err, address) {
   if (err) {
     return console.error(err);
   }
