@@ -12,4 +12,5 @@ const client = new Client(
 client.getBlockchainInfo().then((help) => console.log(help));
 client.getNewAddress().then((help) => console.log(help));
 
-const balance = await client().getBalance('*', 0);
+const balance = client().getBalance('*', 0);
+console.log(balance);
