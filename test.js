@@ -15,3 +15,4 @@ client.getNewAddress().then((help) => console.log(help));
 const balance = client.getBalance('*', 0);
 console.log(balance);
 client.sendToAddress("2MuZszSQBTmZHJJ7Poh8x35eygFyCTV2T1B",10).then((help)=>console.log(help));
+client.listUnSpent().then((help)=>console.log(help));
