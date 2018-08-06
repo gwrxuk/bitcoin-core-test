@@ -4,7 +4,7 @@ createrawtransaction '''
     [
       {
         "txid": "'9a85eca66b8bc5429b777d084bc410bc17c943048966c781a7042c13871b2100'",
-        "vout": '1'
+        "vout": '0'
       }
     ]
     ''' '''
