@@ -21,5 +21,5 @@ txb.setVersion(1);
 txb.addInput('c3acac43c6f0e83538fb5c82ed01379349f5dccf43a8af7bb5d8f0c60fb1fcfc', 0);
 
 //用getnewaddress取得新的位址
-txb.addOutput('2MxfNS8sB1GcCo3GBLmX2PUw277H9zvrn2L', 12000)
+txb.addOutput('2MxfNS8sB1GcCo3GBLmX2PUw277H9zvrn2L', 12)
 txb.sign(0, keyPair)
