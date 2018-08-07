@@ -16,8 +16,8 @@ console.log('b');
 //產生付款位址
 const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
 
-const txb = new bitcoin.TransactionBuilder()
-console.log(txb.version);
+const txb = new bitcoin.TransactionBuilder(regtest)
+console.log(txb);
 
 //用listunspent 取出最後一筆資料的txid
 txb.addInput('c3acac43c6f0e83538fb5c82ed01379349f5dccf43a8af7bb5d8f0c60fb1fcfc', 0);
