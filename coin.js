@@ -9,14 +9,14 @@ const regtest = bitcoin.networks.testnet
 const bip65 = require('bip65')
 
 //產生公鑰跟私鑰
-const keyPair = bitcoin.ECPair.makeRandom()
+const keyPair = bitcoin.ECPair.makeRandom();
 
 //產生付款位址
 const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
 
-const wif = bitcoin.ECPair.toWIF("cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4");
+const alice = bitcoin.ECPair.fromWIF("cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4");
 
-const alice = bitcoin.ECPair.fromWIF('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy')
+
 const txb = new bitcoin.TransactionBuilder()
 
 txb.setVersion(1);
