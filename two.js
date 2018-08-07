@@ -19,7 +19,7 @@ const keyPairA = bitcoin.ECPair.fromWIF(privateKeyA,regtest);
 const keyPairB = bitcoin.ECPair.fromWIF(privateKeyB,regtest);
 
 //產生付款位址
-const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
+//const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
 
 const txb = new bitcoin.TransactionBuilder(regtest)
 
