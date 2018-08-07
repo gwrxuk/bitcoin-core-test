@@ -39,3 +39,4 @@ txb.sign(1, keyPairB);
 //取得交易序號
 const transaction_01 = txb.build().toHex(); 
 console.log(transaction_01);
+// 可用bitcoin-cli decoderawtransaction 解開hex
