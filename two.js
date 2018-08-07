@@ -35,7 +35,7 @@ txb.addOutput('2NBQG5mqbxDgSNoMWWihGZ7e1BJMWEakKy4',10);
 
 //交易簽名
 txb.sign(0, keyPairA); //第一個位置的是上一筆交易中的第一個支出，第二個欄位是我們的公鑰與私鑰
-txb.sign(0, keyPairA); 
+txb.sign(1, keyPairB); 
 //取得交易序號
 const transaction_01 = txb.build().toHex(); 
 console.log(transaction_01);
