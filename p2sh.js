@@ -32,8 +32,8 @@ var privateKey = "cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4";
 //產生公鑰跟私鑰
 const keyPair = bitcoin.ECPair.fromWIF(privateKey,regtest);
 
-//產生付款位址
-const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
+
+
 
 const txb = new bitcoin.TransactionBuilder(regtest)
 
