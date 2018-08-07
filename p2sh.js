@@ -24,7 +24,7 @@ const bip65 = require('bip65')
     //產生位址
     const { address } = bitcoin.payments.p2sh({
       redeem: bitcoin.payments.p2ms({ m: 2, pubkeys })
-    })
+    },regtest);
 
     //輸入私鑰，教學用，請勿隨意公開私鑰
 var privateKey = "cSce9ZYpum1cA9bwA4DivtDn1YKLzZkiLrt8Tysc7WDu9Tj2DfVW";
