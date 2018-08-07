@@ -1,3 +1,5 @@
+/*************** 2 to 3 多個簽名交易 *********/
+
 //引入bitcoin模組
 const bitcoin = require("bitcoinjs-lib");
 
@@ -8,13 +10,18 @@ const regtest = bitcoin.networks.testnet
 //https://github.com/bitcoinjs/bip65 
 const bip65 = require('bip65')
 
+/*********
+1. bitcoin-cli -regtest getnewaddress
+2. bitcoin-cli -regtest validateaddress
+以上步驟做三次取得public key
+*********/
    const pubkeys = [
-      '026477115981fe981a6918a6297d9803c4dc04f328f22041bedff886bbc2962e01',
-      '02c96db2302d19b43d4c69368babace7854cc84eb9e061cde51cfa77ca4a22b8b9',
-      '03c6103b3b83e4a24a0e33a4df246ef11772f9992663db0c35759a5e2ebf68d8e9'
+      '032826b8e8d862aeaf336530fb6163a29af156a8e533539bf9837b5d473858aeb3',
+      '02a8609a21df186ff5d8d0933de78de07324c8f7c815c0ad53c1af706dd0c55fb3',
+      '02486c6214fa52ad10109e619ff13c4f0e09fdee215c8958c246219104b336e928'
     ].map((hex) => Buffer.from(hex, 'hex'));
     
-    console.log(pubkeys);
+    //產生位址
     const { address } = bitcoin.payments.p2sh({
       redeem: bitcoin.payments.p2ms({ m: 2, pubkeys })
     })
