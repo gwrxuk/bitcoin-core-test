@@ -11,7 +11,7 @@ const bip65 = require('bip65')
 //輸入私鑰，教學用，請勿隨意公開私鑰
 var privateKey = "cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4";
 
-//產生公要跟私鑰
+//產生公鑰跟私鑰
 const keyPair = bitcoin.ECPair.fromWIF(privateKey,regtest);
 
 //產生付款位址
@@ -27,6 +27,7 @@ txb.addInput('c3acac43c6f0e83538fb5c82ed01379349f5dccf43a8af7bb5d8f0c60fb1fcfc',
 txb.addOutput('2MxfNS8sB1GcCo3GBLmX2PUw277H9zvrn2L', 12)
 
 //交易簽名
-console.log(txb);
-txb.sign(0, keyPair)
-console.log(txb.build().toHex());
+txb.sign(0, keyPair); //第一個位置的是上一筆交易中的第一個支出，第二個欄位是我們的公鑰與私鑰
+
+//取得交易序號
+const transaction_01 = txb.build().toHex(); 
