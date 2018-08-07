@@ -31,3 +31,4 @@ txb.sign(0, keyPair); //第一個位置的是上一筆交易中的第一個支�
 
 //取得交易序號
 const transaction_01 = txb.build().toHex(); 
+console.log(transaction_01);
