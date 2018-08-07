@@ -11,7 +11,7 @@ const bip65 = require('bip65')
 //輸入私鑰
 var privateKey = "cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4";
 console.log('a');
-const keyPair = bitcoin.ECPair.fromWIF(privateKey);
+const keyPair = bitcoin.ECPair.fromWIF(privateKey,regtest);
 console.log('b');
 //產生付款位址
 const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
