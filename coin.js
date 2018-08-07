@@ -14,6 +14,9 @@ const keyPair = bitcoin.ECPair.makeRandom()
 //產生付款位址
 const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
 
+const wif = bitcoin.ECPair.toWIF("cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4");
+
+const alice = bitcoin.ECPair.fromWIF('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy')
 const txb = new bitcoin.TransactionBuilder()
 
 txb.setVersion(1);
@@ -22,4 +25,4 @@ txb.addInput('c3acac43c6f0e83538fb5c82ed01379349f5dccf43a8af7bb5d8f0c60fb1fcfc',
 
 //用getnewaddress取得新的位址
 txb.addOutput('2MxfNS8sB1GcCo3GBLmX2PUw277H9zvrn2L', 12)
-txb.sign(0, keyPair)
+txb.sign(0, alice)
