@@ -15,9 +15,9 @@ var privateKey = "cNcvQphXWjAJ365Y8Tuhti5a6fCh9ftpR3GScZs5vdidBwQqpxT4";
 const keyPair = bitcoin.ECPair.fromWIF(privateKey,regtest);
 
 //產生付款位址
-const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey })
-
-const txb = new bitcoin.TransactionBuilder(regtest)
+const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
+console.log(bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey }));
+const txb = new bitcoin.TransactionBuilder(regtest);
 
 
 //用listunspent 取出最後一筆資料的txid
